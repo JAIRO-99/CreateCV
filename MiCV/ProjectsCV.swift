@@ -9,7 +9,34 @@ import SwiftUI
 
 struct ProjectsCV: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let columns = [GridItem(.adaptive(minimum: 150))]
+        NavigationStack{
+            Text("New Projects")
+                .font(.title)
+                .bold()
+            LazyVGrid(columns: columns){
+                // Project list
+                Image(systemName: "iphone")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .padding(.vertical,20)
+                //.scaledToFill()
+                Image(systemName: "iphone")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                //.scaledToFill()
+                Image(systemName: "iphone")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                //.scaledToFill()
+                Image(systemName: "iphone")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                //.scaledToFill()
+            }
+            .padding(.vertical,10)
+            
+        }
     }
 }
 

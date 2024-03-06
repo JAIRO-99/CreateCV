@@ -2,23 +2,31 @@
 //  ContentView.swift
 //  MiCV
 //
-//  Created by New on 26/02/24.
+//  Created by New on 02/03/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+      
+        TabView{
+            
+            HomeCV(skill: .example)
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            ProjectsCV()
+                .tabItem {
+                    Image(systemName:"folder.fill")
+                    Text("Projects")
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .preferredColorScheme(.dark)
 }
